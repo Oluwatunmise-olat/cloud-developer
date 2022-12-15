@@ -9,7 +9,7 @@ Content for Udacity's cloud developer nanodegree's following two courses:
 * Course 04 - Develop & Deploy Serverless App
 
 Here is the repository structure:
-```bash
+```
 ├── README.md
 ├── course-02
 │   ├── exercises
@@ -18,5 +18,4 @@ Here is the repository structure:
     ├── exercises
     └── project
 ```
-
 
