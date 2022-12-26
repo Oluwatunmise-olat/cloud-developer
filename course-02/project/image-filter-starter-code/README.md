@@ -30,6 +30,11 @@ We've included a few helper functions to handle some of these concepts and we're
 import { filterImageFromURL, deleteLocalFiles } from "./util/util";
 ```
 
+### Building the application
+
+1. npm run build
+2. npm run zip
+
 ### Deploying your system
 
 Follow the process described in the course to `eb init` a new application and `eb create` a new environment to deploy your image-filter service! Don't forget you can use `eb deploy` to push changes.
