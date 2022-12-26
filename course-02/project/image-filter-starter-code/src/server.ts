@@ -16,17 +16,17 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
 	// GET /filteredimage?image_url={{URL}}
 	app.get("/filteredimage", async (req: Request, res: Response) => {
 		if (req.query && !req.query.image_url) {
-			return res.status(400).json({
+			return res.status(422).json({
 				status: false,
 				message: "Query field 'image_url' is required",
 			});
 		}
 
-		const imageUrl = req.query.image_url;
+		const imageUrl: string = req.query.image_url;
 
-		const file = await filterImageFromURL(imageUrl);
+		const file: string = await filterImageFromURL(imageUrl);
 
-		res.sendFile(file);
+		res.status(200).sendFile(file);
 		res.on("close", () => deleteLocalFiles([file]));
 	});
 	// endpoint to filter an image from a public url.
